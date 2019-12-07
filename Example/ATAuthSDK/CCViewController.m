@@ -20,7 +20,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    NSString *info = @"43BHvUQhGePw2L0zD6vcnBUo98dyWgyz8jR0q98Kw7VLeeEf85U1Q+5EI5usvnMCb4e+mua32Ii91ivrr7CCbNaPQVyfGWGAjjxD23U43HGBOBUBwrd5TQzhNYw0iPt2xd7bKgwEeGDBg0LdeMHGGq+xCl32YvQnL3Q4trLP++KdtzG8wkguTAaxzoIj9Q4/LLyl2iks2WdRTbGoMUs0EGgq/z6wAwxJxxIFnP208G46DMWKMCjraA==";
+    NSString *info = @"your code";
     [[TXCommonHandler sharedInstance] setAuthSDKInfo:info complete:^(NSDictionary * _Nonnull resultDic) {
         NSLog(@"初始化成功");
     }];
