@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		2B7F8B84C6C4CA6C09C1FD01 /* Pods-ATAuthSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATAuthSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-ATAuthSDK_Example/Pods-ATAuthSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		348D4BCD2E5165E9A86CCD88 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		348D4BCD2E5165E9A86CCD88 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4317296A5278F4E2589488DF /* Pods-ATAuthSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATAuthSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-ATAuthSDK_Tests/Pods-ATAuthSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4F1BCD2078675A83A36FA69D /* Pods_ATAuthSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATAuthSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5138C7E72BE5999A6540A6B2 /* Pods-ATAuthSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATAuthSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ATAuthSDK_Tests/Pods-ATAuthSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,10 +63,10 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6ACCCE3C75549438EF13361A /* Pods-ATAuthSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATAuthSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-ATAuthSDK_Example/Pods-ATAuthSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7597AFAF24047FC896AE4362 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		7597AFAF24047FC896AE4362 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B0C2DEB701B8094B1BB418A4 /* Pods_ATAuthSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATAuthSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F92E6713A57C9D2BFC5A3A8A /* ATAuthSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ATAuthSDK.podspec; path = ../ATAuthSDK.podspec; sourceTree = "<group>"; };
+		F92E6713A57C9D2BFC5A3A8A /* ATAuthSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ATAuthSDK.podspec; path = ../ATAuthSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,6 @@
 				5138C7E72BE5999A6540A6B2 /* Pods-ATAuthSDK_Tests.debug.xcconfig */,
 				4317296A5278F4E2589488DF /* Pods-ATAuthSDK_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +207,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				41A0A80A70881758FDF00733 /* [CP] Embed Pods Frameworks */,
+				DFAFBA664583C3715DA73F07 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = deju;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 329C98NCKN;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -317,24 +320,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		41A0A80A70881758FDF00733 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ATAuthSDK_Example/Pods-ATAuthSDK_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ATAuthSDK/ATAuthSDK.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ATAuthSDK.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ATAuthSDK_Example/Pods-ATAuthSDK_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		461E9751EC02DC2AF9506204 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,6 +340,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFAFBA664583C3715DA73F07 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ATAuthSDK_Example/Pods-ATAuthSDK_Example-resources.sh",
+				"${PODS_ROOT}/../../ATAuthSDK/ATAuthSDK.framework/ATAuthSDK.bundle",
+				"${PODS_ROOT}/../../ATAuthSDK/ATAuthSDK.framework/TYRZResource.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ATAuthSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TYRZResource.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ATAuthSDK_Example/Pods-ATAuthSDK_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -494,13 +499,15 @@
 			baseConfigurationReference = 2B7F8B84C6C4CA6C09C1FD01 /* Pods-ATAuthSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 329C98NCKN;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ATAuthSDK/ATAuthSDK-Prefix.pch";
 				INFOPLIST_FILE = "ATAuthSDK/ATAuthSDK-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dighouse.dighouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -510,13 +517,15 @@
 			baseConfigurationReference = 6ACCCE3C75549438EF13361A /* Pods-ATAuthSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 329C98NCKN;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ATAuthSDK/ATAuthSDK-Prefix.pch";
 				INFOPLIST_FILE = "ATAuthSDK/ATAuthSDK-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dighouse.dighouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -8,35 +8,16 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ATAuthSDK'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of ATAuthSDK.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.version          = '1.0.0'
+  s.summary          = 'My ATAuthSDK'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+TODO: My iOS ATAuthSDK
                        DESC
-
-  s.homepage         = 'https://github.com/deju/ATAuthSDK'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/CaiChenghan/ATAuthSDK'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'deju' => '1178752402@qq.com' }
-  s.source           = { :git => 'https://github.com/deju/ATAuthSDK.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'ATAuthSDK/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'ATAuthSDK' => ['ATAuthSDK/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.author           = { '蔡成汉' => '1178752402@qq.com' }
+  s.source           = { :git => 'https://github.com/CaiChenghan/ATAuthSDK.git', :tag => s.version.to_s }
+  s.ios.deployment_target = '9.0'
+  s.resources        = "ATAuthSDK/ATAuthSDK.framework/ATAuthSDK.bundle","ATAuthSDK/ATAuthSDK.framework/TYRZResource.bundle"
+  s.vendored_frameworks = 'ATAuthSDK/ATAuthSDK.framework'
 end
