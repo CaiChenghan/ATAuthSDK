@@ -2,7 +2,7 @@
 [阿里云号码验证SDK](https://help.aliyun.com/product/75010.html?spm=a2c4g.11174283.6.540.79f229d3qHCmVk)
 
 ## 版本说明
-V2.12.0-2020.01.12
+[V2.12.0-2020.01.12](https://github.com/CaiChenghan/ATAuthSDK/blob/master/ATAuthSDKNote.txt)
 
 ## 使用
 
