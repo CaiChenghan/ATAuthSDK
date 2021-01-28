@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BDE971425C268D300189FCA /* ATAuthSDKNote.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = ATAuthSDKNote.txt; path = ../ATAuthSDKNote.txt; sourceTree = "<group>"; };
 		2B7F8B84C6C4CA6C09C1FD01 /* Pods-ATAuthSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATAuthSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-ATAuthSDK_Example/Pods-ATAuthSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		348D4BCD2E5165E9A86CCD88 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4317296A5278F4E2589488DF /* Pods-ATAuthSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATAuthSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-ATAuthSDK_Tests/Pods-ATAuthSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +193,7 @@
 				F92E6713A57C9D2BFC5A3A8A /* ATAuthSDK.podspec */,
 				348D4BCD2E5165E9A86CCD88 /* README.md */,
 				7597AFAF24047FC896AE4362 /* LICENSE */,
+				1BDE971425C268D300189FCA /* ATAuthSDKNote.txt */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -207,7 +209,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				DFAFBA664583C3715DA73F07 /* [CP] Copy Pods Resources */,
+				82E524F9627B87C22A41DF3C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -342,7 +344,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DFAFBA664583C3715DA73F07 /* [CP] Copy Pods Resources */ = {
+		82E524F9627B87C22A41DF3C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -350,12 +352,10 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ATAuthSDK_Example/Pods-ATAuthSDK_Example-resources.sh",
 				"${PODS_ROOT}/../../ATAuthSDK/ATAuthSDK.framework/ATAuthSDK.bundle",
-				"${PODS_ROOT}/../../ATAuthSDK/ATAuthSDK.framework/TYRZResource.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ATAuthSDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TYRZResource.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -454,7 +454,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -487,7 +487,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -503,6 +503,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ATAuthSDK/ATAuthSDK-Prefix.pch";
 				INFOPLIST_FILE = "ATAuthSDK/ATAuthSDK-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dighouse.dighouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -521,6 +522,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ATAuthSDK/ATAuthSDK-Prefix.pch";
 				INFOPLIST_FILE = "ATAuthSDK/ATAuthSDK-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dighouse.dighouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";

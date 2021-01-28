@@ -20,6 +20,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    NSString *version = [[TXCommonHandler sharedInstance]getVersion];
+    NSLog(@"%@",version);
+    
     NSString *info = @"your code";
     [[TXCommonHandler sharedInstance] setAuthSDKInfo:info complete:^(NSDictionary * _Nonnull resultDic) {
         NSLog(@"初始化成功");

@@ -25,12 +25,6 @@
 #define TX_Login_Protocol_Action            @"6671" // 点击了协议按钮 (注: 2.7.0以前的老接口对外暂时没有该回调)
 #define TX_Login_ClickLoginBtn_Action       @"6672" // 点击了登录按钮事件 (注: 2.7.0以前的老接口对外暂时没有该回调)
 
-typedef enum : NSInteger {
-    TX_Top_Request_Environment_Online,   // 0
-    TX_Top_Request_Environment_PreLine,
-    TX_Top_Request_Environment_Daily
-} TX_Top_Request_Environment;
-
 @interface TXCommonUtils : NSObject
 
 /**
@@ -58,13 +52,7 @@ typedef enum : NSInteger {
 + (BOOL)isChinaTelecom;
 
 /**
-获取当前上网卡网络名称
-@return 结果
-*/
-+ (NSString *)getCurrentMobileNetworkName;
-
-/**
-获取当前上网卡运营商名称，比如中国移动
+获取当前上网卡运营商名称，比如中国移动、中国电信、中国联通
 @return 结果
 */
 + (NSString *)getCurrentCarrierName;
@@ -100,8 +88,13 @@ typedef enum : NSInteger {
 + (NSString *)getMobilePrivateIPAddress:(BOOL)preferIPv4;
 
 /**
- SDK的服务端环境设置，注意：此接口只在Debug模式下生效
+ 获取当前设备的唯一标识ID
  */
-+ (void)setSDKServerEnvironment:(TX_Top_Request_Environment )env;
++ (NSString *)getUniqueID;
+
+/**
+通过颜色设置生成图片，支持弧度设置，比如一键登录按钮背景图片
+*/
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size isRoundedCorner:(BOOL )isRounded radius:(CGFloat)radius;
 
 @end

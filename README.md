@@ -1,29 +1,30 @@
 # ATAuthSDK
+[阿里云号码验证SDK](https://help.aliyun.com/product/75010.html?spm=a2c4g.11174283.6.540.79f229d3qHCmVk)
 
-[![CI Status](https://img.shields.io/travis/deju/ATAuthSDK.svg?style=flat)](https://travis-ci.org/deju/ATAuthSDK)
-[![Version](https://img.shields.io/cocoapods/v/ATAuthSDK.svg?style=flat)](https://cocoapods.org/pods/ATAuthSDK)
-[![License](https://img.shields.io/cocoapods/l/ATAuthSDK.svg?style=flat)](https://cocoapods.org/pods/ATAuthSDK)
-[![Platform](https://img.shields.io/cocoapods/p/ATAuthSDK.svg?style=flat)](https://cocoapods.org/pods/ATAuthSDK)
+## 版本说明
+V2.12.0-2020.01.12
 
-## Example
+## 使用
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-ATAuthSDK is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
+#### 1. 指定git引用
 ```ruby
-pod 'ATAuthSDK'
+pod 'ATAuthSDK', :git => 'https://github.com/CaiChenghan/ATAuthSDK.git', :tag => '2.12.0'
+```
+
+#### 2. 使用私有库
+```ruby
+ source 'https://github.com/CaiChenghan/CCRepo.git'
+ source 'https://github.com/CocoaPods/Specs.git'
+ target 'MyApp' do
+    pod 'ATAuthSDK', '~> 2.12.0'
+ end
 ```
 
 ## Author
 
-deju, 1178752402@qq.com
+1178752402@qq.com
 
 ## License
 
 ATAuthSDK is available under the MIT license. See the LICENSE file for more info.
+
